@@ -1,0 +1,86 @@
+*{
+    padding: 0%;
+    margin: 0%;
+}
+body{
+    background-color: rgb(252, 244, 244);
+}
+
+input{
+    margin: 15px 15px 15px 15px;
+    width: 320px;
+    height: 45px;
+    border-radius: 5px;
+    border: none;
+    border: solid 2px rgb(136, 180, 184);
+    font-size: 15px;
+    font-family: "Bahnschrift";
+}
+#formAlign{
+    width: 145px;
+}
+.align{
+    display: flex;
+    justify-content: flex-start;
+}
+button{
+    border: none;
+    border: solid 1px white;
+    width: 140px;
+    background-color: blue;
+    height: 50px;
+    color: white;
+    font-size: 18px;
+    font-family: "Bahnschrift";
+    border-radius: 5px;
+   margin-left: 10px;
+}
+.center{
+    background-color:#FFF5F5;
+    width: 30%;
+    margin: auto;
+    margin-top: 50px;
+}
+#count{
+    border: none;
+    border: solid 1px white;
+    width: 140px;
+    background-color: green;
+    height: 50px;
+    color: white;
+    font-size: 18px;
+    font-family: "Bahnschrift";
+    border-radius: 5px;
+    margin-top: 15px;
+}
+#send{
+    font-family: "Bahnschrift";
+}
+h3{
+    font-family: "Bahnschrift";
+    width: 150px;
+    height: 50px;
+    background-color: red;
+    box-shadow:2px 5px 5px 2px red;
+    border-radius: 12px;
+}
+a h3{
+    background-color: blue;
+    box-shadow: none;
+    color: white;
+    text-decoration: none;
+    margin-top: 10px;
+    width: 200px;
+}
+.form{
+        box-shadow: 2px 5px 10px 2px rgb(110, 95, 95);
+        animation: entrance;
+        animation-duration: 1s;
+        border-width: 2px;
+        border-color: rgb(165, 207, 50);
+        border-style: solid;
+        border-radius: 5px;
+        padding: 30px;
+        background-color: rgba(0, 0, 0, 0.596);
+        position: relative;
+}
