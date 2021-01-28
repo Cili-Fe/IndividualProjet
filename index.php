@@ -13,15 +13,9 @@
 <?php
   $dat = new mysqli("localhost", "root", "", "liste");//Connexion à la base de données
   if (!empty($_POST["submit"])){
-    $dat->query("INSERT INTO `utilisateur` SET `mail`='{$_POST['mail']}', `wordpass`='{$_POST['wordpass']}'");
-  }
-
-  
-  
-
- //Redirection vers la page d'accueil
-
-
+    $dat->query("INSERT INTO `utilisateur` SET `mail`='{$_POST['mail']}', `wordpass`='{$_POST['wordpass']}'");}
+   
+  header('Location: http://localhost/simply-count/create.php')
   ?>
 
 
