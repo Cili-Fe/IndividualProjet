@@ -1,11 +1,15 @@
-<?php 
+<?php
+
 
 try{
-    $db = new PDO('mysql:host=localhost; dbname=liste', 'root', ''); 
-}catch(Exception $e) {
-    die('Erreur:'.$e ->getMessage());
+    $user='root';
+    $pass="";
+    $db=new PDO("mysql:host=localhost;dbname=liste",$user,$pass);
+    echo"Enregistrement reussi"."<br/>";
+
 }
-if (extension_loaded('PDO')){
-    echo 'Connexion etablie!';
+catch(PDOException $e){
+Print"erreur!:".$e->getMessage()."<br/>";
+
 }
 ?>

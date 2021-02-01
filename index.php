@@ -5,43 +5,38 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <link rel="stylesheet" href="index.css">
+    <link rel="stylesheet" href="pages/bootstrap/css/bootstrap.min.css">
     <title>forms</title>
 </head>
-<!--debu du body-->
+<!--debut du body-->
 <body>
-<!--debut du PHP:connexion-->
-<?php
-  $dat = new mysqli("localhost", "root", "", "liste");//Connexion à la base de données
-  if (!empty($_POST["submit"])){
-    $dat->query("INSERT INTO `utilisateur` SET `mail`='{$_POST['mail']}', `wordpass`='{$_POST['wordpass']}'");}
-   
-  header('Location: http://localhost/simply-count/create.php')
-  ?>
+<div class="container card"> 
 
+<div class=" col mt-2 ml-2 mr-2 mb-2">
+<h2>S'inscrire</h2>
+<!--Debut du formulaire-->
+        <form action="treatmen.php" method="POST">
+            <input class="row mt-2" type="text" placeholder="nom" name="nom" required>
+            <input class="row mt-2" type="text" placeholder="prenom" name="prenom" required>
+            <input class="row mt-2" type="email" placeholder="email" name="email" required>
+            <input class="row mt-2" type="password" placeholder="mot de passe" name="password" required>
 
-<!--fin du PHP-->
-
-    <div class="center">
-        <form action="" method="POST">
-            
-
-        
-           <div class="form">
-            <h3>Créer un compte</h3>
-            <div>
-                <input type="email" name="mail" placeholder="Adresse e-mail" required>
-                <input type="password" name="wordpass" placeholder="Mot de passe" required>
-
-            </div>
-
-            <div>
-                <button type="submit" id="send">Valider</button>
-            </div>
-            <a href="conect.php"> <h3>Se connecter</h3> </a>
-           </div>
+            <button class="bg-success text-light mt-2">s'inscrire</button>
         </form>
+</div>
+<h2>Connexion</h2>
+    <div class=" col mt-2 ml-2 mr-2 mb-2">
+        <form action="verify.php" method="POST">
+            <input class="row mt-2" type="text" placeholder="email" name="email" required>
+            <input class="row mt-2" type="password" placeholder="mot de passe" name="password" required>
+            <button class="bg-success text-light mt-2">se connecter</button>
+        </form>
+        <!--Fin du formulaire-->
     </div>
-    <script src="index.js"></script>
+
+
+</div>
+
 </body>
 <!--fin du body-->
 </html>

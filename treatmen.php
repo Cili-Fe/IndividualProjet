@@ -1,17 +1,25 @@
 <?php
-require_once'connexion.php';
+require_once "connexion.php";
 
 
-$mail = $_POST['mail'];
-$passeword = $_POST['passeword'];
+$nom=$_POST["nom"];
+$prenom=$_POST["prenom"];
+$email=$_POST["email"];
+$password=$_POST["password"];
 
 
-$preparation = $db -> prepare('INSERT INTO utilisateur (mail, passeword,) VALUES(?, ?)');
-$preparation -> execute(array($mail, $passeword));//*requette preparée
+$preparation=$db->prepare("INSERT INTO utilisateur (nom, prenom, email,password) VALUES(?, ?, ?, ?)" );
+$data=array($nom,$prenom,$email,$password);
+$preparation -> execute($data);
+$cost=['cost' => 12];
+$password=password_hash($password, PASSWORD_BCRYPT, $cost);
 
-//compilation
+
+
+/*compilation
 $preparation->bindParam(':mail',$mail);
-$preparation->bindParam(':passeword',$passeword);
-//execution de la requette
-$preparation->execute();
+$preparation -> bindParam(':wordpass',$wordpass);
+$preparation -> bindParam(':wordpass',password_hash( $password, PASSWORD_DEFAULT));
+$preparation -> execute();
+*/
 ?>
